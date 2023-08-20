@@ -164,9 +164,8 @@ public class picture extends AppCompatActivity {
     public void processImage(Bitmap bitmap){
         String OCRresult = null;
         tess.setImage(bitmap);
-        //OCRresult = tess.getUTF8Text();
-        //OCRresult = OCRresult.replaceAll("[^a-zA-Z0-9가-힣\\s]", "");
-        ocr_text.setText("안녕하새요. 저희는 맞춤법 검사기가 실행이 잘 돼는지 테스트 를 진행하고 있읍니다.");
+        OCRresult = tess.getUTF8Text();
+        OCRresult = OCRresult.replaceAll("[^a-zA-Z0-9가-힣\\s]", "");
     }
 
     //장치에 파일 복사
